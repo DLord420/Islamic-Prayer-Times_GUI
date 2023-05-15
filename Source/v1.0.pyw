@@ -1,4 +1,4 @@
-"""A simple script to show Islamic prayer and related times for Tehran (Tajrish), Iran.  DLord"""
+"""A simple GUI window to show Islamic prayer and related times for Tehran (Tajrish), Iran.  DLord"""
 
 import sys
 from datetime import date
