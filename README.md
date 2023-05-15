@@ -1,3 +1,5 @@
+![Settings Window](https://github.com/DLord420/Islamic-Prayer-Times_GUI/blob/main/Screenshot.png)
+
 # Islamic-Prayer-Times_GUI  
 ## [**_Islamic-Prayer-Times_**](https://github.com/DLord420/Islamic-Prayer-Times) GUI port    
 ### Islamic prayer and related times for Tehran (Tajrish), Iran.   
