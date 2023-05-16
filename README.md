@@ -8,4 +8,5 @@ A simple Python GUI app to show today's Islamic prayer and related times for Teh
 * Calculation method: Institute of Geophysics, University of Tehran   
 * Midnight mode: Jafari    
 
-Many thanks to sepandhaghighi for the [**_ASCII Art Library for Python_**](https://github.com/sepandhaghighi/art)
+Many thanks to sepandhaghighi for the [**_ASCII Art Library for Python_**](https://github.com/sepandhaghighi/art)   
+Many thanks to Mike for the [**_PySimpleGUI_**](https://github.com/PySimpleGUI/PySimpleGUI)
