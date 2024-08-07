@@ -13,7 +13,7 @@ import requests
 from art import tprint
 from persiantools.jdatetime import JalaliDate, digits
 
-SCRIPT_VERSION = "3.1"
+SCRIPT_VERSION = "3.2"
 WINDOW_TITLE = f"Islamic Prayer Times by DLord (v{SCRIPT_VERSION})"
 
 # Here you can change the location info:
@@ -71,10 +71,13 @@ def get_weather(loc) -> str:
     c.setopt(c.URL, f"https://wttr.in/{loc}?format=1")
     c.setopt(c.WRITEDATA, buffer)
     c.setopt(c.CAINFO, certifi.where())
-    c.perform()
-    c.close()
-    body = buffer.getvalue()
-    return body.decode("utf-8")
+    try:
+        c.perform()
+        c.close()
+        body = (buffer.getvalue()).decode("utf-8")
+    except pycurl.error:
+        body = "Weather dat not available!"
+    return body
 
 
 if __name__ == "__main__":
