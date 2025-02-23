@@ -4,8 +4,7 @@ DLord
 """
 
 from datetime import date
-from io import BytesIO, StringIO
-
+from io import BytesIO
 import certifi
 import pycurl
 import PySimpleGUI as sg
