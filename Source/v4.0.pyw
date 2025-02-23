@@ -1,5 +1,5 @@
 """
-A simple GUI app to show Islamic prayer and related times, and weather forecast of the day for a given location (now set for Tehran (Tajrish), Iran).  You could simply change the Country, City, and Area (optional).
+A simple GUI app to show Islamic prayer and related times, and weather forecast of the day for a given location (now set for Tehran (Tajrish), Iran).  You could simply change the COUNTRY, CITY, and AREA (optional).
 DLord
 """
 
@@ -9,22 +9,21 @@ import certifi
 import pycurl
 import PySimpleGUI as sg
 import requests
-from art import *
+from art import text2art
 from persiantools.jdatetime import JalaliDate, digits
 
 SCRIPT_VERSION = "4.0"
 WINDOW_TITLE = f"Islamic Prayer Times by DLord (v{SCRIPT_VERSION})"
 
 # Here you can change the location info:
-Area = "Tajrish"
-City = "Tehran"
-Country = "Iran"
+AREA = "Tajrish"
+CITY = "Tehran"
+COUNTRY = "Iran"
 
 
 def get_date() -> str:
     """Get todays date and retuen formated string."""
-    today = date.today()
-    return today.strftime("%A %d-%b-%y")
+    return date.today().strftime("%A %d-%b-%y")
 
 
 def get_jalali_date() -> str:
@@ -83,14 +82,14 @@ def get_weather(loc) -> str:
 if __name__ == "__main__":
     try:
         response = requests.get(
-            f"http://api.aladhan.com/v1/timingsByAddress?address={Area}%2C+{City}%2C+{Country}&method=7&midnightMode=1",
+            f"http://api.aladhan.com/v1/timingsByAddress?address={AREA}%2C+{CITY}%2C+{COUNTRY}&method=7&midnightMode=1",
             timeout=10,
         )
         response.raise_for_status()
         timings = response.json()["data"]["timings"]
         header1_date = "Azan times for: " + get_date() + "-" + get_jalali_date()
-        header2_location = f"\nLocation: {City} ({Area}) - {Country}"
-        header3_weather = "\n" + (get_weather(City))
+        header2_location = f"\nLocation: {CITY} ({AREA}) - {COUNTRY}"
+        header3_weather = "\n" + (get_weather(CITY))
         body = str(
             f"\n\nAzan Sobh: {timings['Fajr']}\nSunrise: {timings['Sunrise']}\nAzan Zohr: {timings['Dhuhr']}\nAzan Asr: {timings['Asr']}\nSunset: {timings['Sunset']}\nAzan Maghreb: {timings['Maghrib']}\nAzan Ashaa: {timings['Isha']}\nMidnight: {timings['Midnight']}\n\n\n\n"
         )
