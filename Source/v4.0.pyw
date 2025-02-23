@@ -79,7 +79,7 @@ def get_weather(loc) -> str:
     return body
 
 
-if __name__ == "__main__":
+def main():
     try:
         response = requests.get(
             f"http://api.aladhan.com/v1/timingsByAddress?address={AREA}%2C+{CITY}%2C+{COUNTRY}&method=7&midnightMode=1",
@@ -119,3 +119,6 @@ if __name__ == "__main__":
             element_justification="c",
             text_justification="c",
         ).read()
+
+if __name__ == "__main__":
+    main()
