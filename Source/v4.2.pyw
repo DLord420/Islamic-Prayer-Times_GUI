@@ -7,12 +7,12 @@ from datetime import date
 from io import BytesIO
 import certifi
 import pycurl
-import PySimpleGUI as sg
+import FreeSimpleGUI as sg
 import requests
 from art import text2art
 from persiantools.jdatetime import JalaliDate, digits
 
-SCRIPT_VERSION = "4.1"
+SCRIPT_VERSION = "4.2"
 WINDOW_TITLE = f"Islamic Prayer Times by DLord (v{SCRIPT_VERSION})"
 
 # Here you can change the location info:
