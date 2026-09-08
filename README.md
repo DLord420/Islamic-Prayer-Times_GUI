@@ -1,4 +1,6 @@
-![Settings Window](https://github.com/DLord420/Islamic-Prayer-Times_GUI/blob/main/screenshot.png)
+<p align="center">
+  <img src="screenshot.png" alt="Settings Window" width="350">
+</p>
 
 ## Islamic-Prayer-Times_GUI   <div dir= "rtl">  اوقات شرعی
 ### [**_Islamic-Prayer-Times_**](https://github.com/DLord420/Islamic-Prayer-Times) GUI port    
