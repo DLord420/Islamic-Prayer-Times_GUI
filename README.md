@@ -1,8 +1,8 @@
 ![Settings Window](https://github.com/DLord420/Islamic-Prayer-Times_GUI/blob/main/screenshot.png)
 
-# Islamic-Prayer-Times_GUI   <div dir= "rtl">  اوقات شرعی
-## [**_Islamic-Prayer-Times_**](https://github.com/DLord420/Islamic-Prayer-Times) GUI port    
-### Islamic prayer and related times, ~~and weather condition~~.   
+## Islamic-Prayer-Times_GUI   <div dir= "rtl">  اوقات شرعی
+### [**_Islamic-Prayer-Times_**](https://github.com/DLord420/Islamic-Prayer-Times) GUI port    
+#### Islamic prayer and related times, ~~and weather condition~~.   
 A simple Python GUI app to show today's Islamic prayer and related times for a given location.   
 * Using: http://api.aladhan.com/
 * Calculation method: Institute of Geophysics, University of Tehran   
